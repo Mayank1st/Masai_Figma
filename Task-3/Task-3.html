@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0px;
+            font-family: Inter;
+        }
+
+        header {
+            max-width: 100%;
+            height: 95vh;
+            background-image: url('./bg-img.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 21.94px;
+            padding-bottom: 28.94px;
+        }
+
+        .section1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            font-family: Inter;
+            font-size: 14.77px;
+            font-weight: 400;
+            line-height: 28.13px;
+            color: #05073C;
+        }
+
+        .section1>span:nth-of-type(1) {
+            color: #EB662B;
+        }
+
+        .section2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            font-family: Inter;
+            font-size: 13.83px;
+            font-weight: 400;
+            line-height: 28.13px;
+            color: #05073C;
+        }
+
+        .section2>button {
+            padding: 12px 20.8px 12px 21px;
+            border-radius: 200px;
+            border: 1px solid #05073C;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .banner {
+            margin-top: 20px;
+        }
+
+        .banner-text {
+            max-width: 664px;
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 72px;
+            text-align: center;
+            margin: auto;
+            /* color: linear-gradient(107deg, rgba(254,248,245,1) 0%, rgba(255,244,239,1) 100%); */
+            background: linear-gradient(to right, #EE8C61 0%, #8C609D 70%, #644EB5 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .heading>span:nth-of-type(1) {
+            font-family: Inter;
+            font-size: 29.41px;
+            font-weight: 700;
+            line-height: 45px;
+            text-align: left;
+            margin-left: 15px;
+        }
+
+        .heading>span:nth-of-type(2) {
+            font-family: Inter;
+            font-size: 14.3px;
+            font-weight: 400;
+            line-height: 28.13px;
+            margin-right: 40.8px;
+            margin-top: 21.88px;
+        }
+
+        .card {
+            margin-top: 40px;
+            display: grid;
+            height: 55vh;
+            gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-areas: "a a b c c"
+                "a a d e f";
+        }
+
+        .card>div {
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 12px;
+            background-size: contain;
+            background-position: center center;
+        }
+
+        .card>div:nth-of-type(1) {
+            grid-area: a;
+            background-image: url('./t3-img1.png');
+
+
+
+        }
+
+        .card>div:nth-of-type(2) {
+            grid-area: b;
+            background-image: url('./t3-img2.png');
+            width: 300px;
+            height: 240px;
+        }
+
+        .card>div:nth-of-type(3) {
+            grid-area: c;
+            background-image: url('./t3-img3.png');
+            width: 540px;
+            height: 240px;
+            background-size: cover;
+        }
+
+        .card>div:nth-of-type(4) {
+            grid-area: d;
+            background-image: url('./t3-img4.png');
+            width: 300px;
+            height: 240px;
+        }
+
+        .card>div:nth-of-type(5) {
+            grid-area: e;
+            background-image: url('./t3-img5.png');
+            background-size: cover;
+        }
+
+        .card>div:nth-of-type(6) {
+            grid-area: f;
+            background-image: url('./t3-img6.png');
+            /* width: 300px;
+            height: 240px; */
+            background-size: auto;
+        }
+
+        section#card {
+            margin-top: 117px;
+        }
+
+        section#tourz {
+            margin-top: 105px;
+        }
+
+        .tourz-card {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .tourz-card>div {
+            width: 100%;
+
+        }
+
+        .tourz-card>div>.logo-div-content>h1 {
+            font-size: 17.72px;
+            font-weight: 500;
+            line-height: 27px;
+            color: #05073C;
+            margin-left: 15px;
+            margin-top: 40px;
+        }
+
+        .tourz-card>div>.logo-div-content>p {
+            font-size: 14.88px;
+            font-weight: 400;
+            line-height: 28.13px;
+            max-width: 255.53px;
+            margin-top: 14px;
+            color: #05073C;
+            margin-left: 15px;
+        }
+
+        .img-div-logo {
+            height: 60px;
+            max-height: 60px;
+            padding-left: 15px;
+        }
+
+        .card-1>.img-div-logo>img:nth-of-type(1) {
+            margin-top: 15px;
+        }
+
+        #weather {
+            max-width: 850px;
+            margin: auto;
+            height: 10vh;
+            border: solid black 1px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 10px 40px 0px #0000000D;
+            border-radius: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        #weather>div {
+            margin: 15px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        #weather>div>.circle {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background: #EB662B0D;
+
+        }
+
+        #weather>div>div:nth-of-type(4) {
+            height: 62px;
+            width: 60px;
+        }
+
+        #weather>div>.weather-content {
+            width: 70%;
+        }
+
+        .weather-content {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+        }
+
+        .weather-content>.p2 {
+            font-size: 13.67px;
+            font-weight: 400;
+            line-height: 19.6px;
+            color: #717171;
+        }
+
+        .weather-content>.p1 {
+            font-family: Inter;
+            font-size: 14.88px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: #05073C;
+        }
+
+        .circle-2 {
+            background: #EB662B;
+            width: 62px;
+            height: 60px;
+            border-radius: 200px;
+            position: relative;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="section1">
+                    <img src="./t3-logo.png" alt="logo">
+                    <span>Home</span>
+                    <span>Tour</span>
+                    <span>Destination</span>
+                    <span>Activities</span>
+                    <span>Pages</span>
+                    <span>Contact</span>
+                </div>
+                <div class="section2">
+                    <span>USD</span>
+                    <span>Help</span>
+                    <span>Sign up</span>
+                    <button>Log in</button>
+                </div>
+            </nav>
+        </div>
+        <section class="banner">
+            <div class="container">
+                <p class="banner-text">Life Is Adventure Make
+                    The Best Of It</p>
+            </div>
+        </section>
+        <section id="weather">
+            <div>
+                <div class="circle"></div>
+                <div class="weather-content">
+                    <p class="p1">where</p>
+                    <p class="p2">Search destinations</p>
+                </div>
+            </div>
+            <div>
+                <div class="circle"></div>
+                <div class="weather-content">
+                    <p class="p1">where</p>
+                    <p class="p2" style="font-size: 11px;">February 05 ~ March 14</p>
+                </div>
+            </div>
+            <div>
+                <div class="circle"></div>
+                <div class="weather-content">
+                    <p class="p1">Tour Type</p>
+                    <p class="p2">All Tour</p>
+                </div>
+            </div>
+            <div class="circle-2-div">
+                <div class="circle-2"></div>
+            </div>
+        </section>
+    </header>
+
+    <!-- CARD -->
+    <section id="card">
+        <div class="container">
+            <div class="heading">
+                <span>Popular things to do</span>
+                <span>See all</span>
+            </div>
+            <div class="card">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tourz -->
+    <section id="tourz">
+        <div class="container">
+            <div class="heading">
+                <span>Why choose Tourz</span>
+            </div>
+            <div class="tourz-card">
+                <div class="card-1">
+                    <div class="img-div-logo">
+                        <img src="./t3-logo1.png" alt="">
+                    </div>
+                    <div class="logo-div-content">
+                        <h1>Ultimate flexibility</h1>
+                        <p>You're in control, with free
+                            cancellation and payment options to
+                            satisfy any plan or budget.</p>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="img-div-logo">
+                        <img src="./t3-logo2.png" alt="">
+                    </div>
+                    <div class="logo-div-content">
+                        <h1>Memorable experiences</h1>
+                        <p>You're in control, with free
+                            cancellation and payment options to
+                            satisfy any plan or budget.</p>
+                    </div>
+                </div>
+                <div class="card-3">
+                    <div class="img-div-logo">
+                        <img src="./t3-logo3.png" alt="">
+                    </div>
+                    <div class="logo-div-content">
+                        <h1>Quality at our core</h1>
+                        <p>You're in control, with free
+                            cancellation and payment options to
+                            satisfy any plan or budget.</p>
+                    </div>
+
+                </div>
+                <div class="card-4">
+                    <div class="img-div-logo">
+                        <img src="./t3-logo4.png" alt="">
+                    </div>
+                    <div class="logo-div-content">
+                        <h1>Award-winning support</h1>
+                        <p>You're in control, with free
+                            cancellation and payment options to
+                            satisfy any plan or budget.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
